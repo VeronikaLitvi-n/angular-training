@@ -9,6 +9,8 @@ import { User } from 'src/app/models/user.interface';
 export class UseListViewComponentComponent {
   @Input() users: User[] = [];
 
+  showOnlyActiveItems: boolean = false;
+
   deleteUser(): void {
     this.users.splice(0, 1)
   }

@@ -1,8 +1,14 @@
-<div class="user-card">
-    <p><span>Name: </span>{{user.firstName}}, {{user.lastName}}</p>
-    <p><span>Age: </span>{{user.age}}</p>
-    <p><span>Gender: </span>{{user.gender}}</p>
-    <p><span>Activated: </span>{{user.activated ? 'yes' : 'no'}}</p>
-    <button mat-button (click)="changeActivate()">{{user.activated ? 'Deactivate' : 'Activate'}}</button>
-    <button mat-button (click)="delete()">Delete</button>
+<div class="user-card" [highlightAge]="18" [appAgeHighlight]="user.age">
+    <div class="user-header">
+        <ng-container *ngTemplateOutlet="titleContent"></ng-container>
+      </div>
+    <div class="user-info">
+        <p><span>Name: </span>{{user.firstName}}, {{user.lastName}}</p>
+        <p><span>Age: </span>{{user.age}}</p>
+        <p><span>Gender: </span>{{user.gender}}</p>
+        <p><span>Activated: </span>{{user.activated ? 'yes' : 'no'}}</p>
+        <button mat-button (click)="changeActivate()">{{user.activated ? 'Deactivate' : 'Activate'}}</button>
+        <button mat-button (click)="delete()">Delete</button>
+    </div>
+
 </div>

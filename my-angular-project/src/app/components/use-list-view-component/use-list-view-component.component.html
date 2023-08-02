@@ -1,2 +1,11 @@
 <h2> User list View Component</h2>
-<app-user-card-component [user]="users[0]" (deleteUser)="deleteUser()"></app-user-card-component>
+<mat-checkbox [(ngModel)]="showOnlyActiveItems"> Show only activated users</mat-checkbox>
+<ng-container *ngFor="let user of users">
+    <div *ngIf="!showOnlyActiveItems || user.activated">
+        <app-user-card-component [user]="user" (deleteUser)="deleteUser()">
+            <ng-template #userCardTitle>
+                Custom Title
+              </ng-template>
+        </app-user-card-component>
+    </div>
+</ng-container>
