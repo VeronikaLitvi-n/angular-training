@@ -10,6 +10,8 @@ import { UserCardComponentComponent } from './components/user-card-component/use
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgeHighlightDirective } from './directives/age-highlight.directive';
+import { FullNamePipe } from './pipes/full-name.pipe';
+import { OrderByCreationDatePipe } from './pipes/order-by-creation-date.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AgeHighlightDirective } from './directives/age-highlight.directive';
     UserListMainComponentComponent,
     UseListViewComponentComponent,
     UserCardComponentComponent,
-    AgeHighlightDirective
+    AgeHighlightDirective,
+    FullNamePipe,
+    OrderByCreationDatePipe
   ],
   imports: [
     BrowserModule,

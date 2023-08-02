@@ -3,7 +3,9 @@ export interface User  {
     lastName: string, 
     age: number, 
     gender: Gender, 
-    activated: boolean
+    activated: boolean,
+    dateOfCreation: Date, 
+    salary: number
 }
 
 export enum Gender {
